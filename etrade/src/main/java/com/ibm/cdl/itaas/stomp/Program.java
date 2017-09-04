@@ -10,8 +10,8 @@ public class Program {
     public static void main(String[] args) throws IOException, TimeoutException {
         ConnectionFactory factory = new ConnectionFactory();
         factory.setHost("test.mo-jiu.com");
-        factory.setUsername("admin");
-        factory.setPassword("mojiu.rmq.2017");
+        factory.setUsername("guest");
+        factory.setPassword("guest");
         Connection connection = factory.newConnection();
         Channel channel = connection.createChannel();
         channel.exchangeDeclare("e.ws.notify", "direct",true);
